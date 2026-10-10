@@ -19,6 +19,8 @@ _*.txt
 _*.png
 _*.py
 *.pid
+*.log
+*.err
 pack.log
 pack.err
 iscc.log
