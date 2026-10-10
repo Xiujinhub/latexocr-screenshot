@@ -93,3 +93,29 @@ D:\test\LaTeXOCR\unins000.exe /VERYSILENT
 
 升级时同步两处：`installer.iss` 的 `MyAppVersion`、`version_info.txt` 的
 `filevers/prodvers/Version`，然后重新打包。
+
+## 发布到 GitHub Release
+
+前置：装好 [GitHub CLI](https://cli.github.com/) 并登录一次：
+
+```bat
+winget install --id GitHub.cli -e
+gh auth login --web
+```
+
+改完版本号、重新打包之后，一条命令发布（自动用 `CHANGELOG.md` 当发布说明，
+并把安装包作为附件上传）：
+
+```bat
+packaging\publish_release.bat v1.0.1
+```
+
+想手动做也行：
+
+```bat
+gh release create v1.0.1 "dist\LaTeXOCR-Setup-1.0.1.exe" --title "v1.0.1" --notes-file CHANGELOG.md
+```
+
+> 注意：GitHub Release 单个附件上限 2 GB，本项目安装包约 344 MB，没问题。
+> 别把 `dist\` 提交进仓库（`.gitignore` 已经排除），安装包只走 Release 附件。
+

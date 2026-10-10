@@ -3,6 +3,14 @@
 把屏幕上的数学公式框选下来，直接识别成 LaTeX 代码。基于 `pix2tex`，运行在 conda 的
 `OCR` 环境（`D:\Anaconda\envs\OCR`，Python 3.9 + torch 1.13.1 CPU + PyQt5）。
 
+## 下载 / 安装
+
+* **直接用**：到 [Releases](https://github.com/Xiujinhub/latexocr-screenshot/releases/latest)
+  下载 `LaTeXOCR-Setup-1.0.0.exe` —— 安装包内置 Python 运行时、全部依赖和模型权重，
+  Windows 10/11 64 位，**不需要 Python / 联网 / 管理员权限**，装完即可离线识别。
+* **改代码 / 从源码跑**：准备好 conda 环境 `OCR`（依赖见下），双击 `run_gui.bat` 即可。
+
+
 ## 文件清单
 
 | 文件 | 说明 |
