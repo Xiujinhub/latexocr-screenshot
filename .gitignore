@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 打包产物：安装包与绿色版都从 Releases 下载，不进仓库
+build/
+dist/
+*.spec.bak
+
+# 运行时数据（历史记录在关闭软件时会清空）
+output/
+
+# 开发期临时文件
+_*.log
+_*.txt
+_*.png
+_*.py
+*.pid
+pack.log
+pack.err
+iscc.log
+iscc.err
+install.log
+
+# 编辑器 / 系统
+.idea/
+.vscode/*
+!.vscode/settings.json
+Thumbs.db
+Desktop.ini
